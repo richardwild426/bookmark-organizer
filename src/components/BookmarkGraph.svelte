@@ -384,7 +384,11 @@
 
 <style>
   .graph-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 0 24px 24px;
+    min-height: 0;
   }
 
   .graph-toolbar {
@@ -455,15 +459,17 @@
   }
 
   .graph-layout {
+    flex: 1;
     display: grid;
     grid-template-columns: minmax(0, 1fr) 320px;
     gap: 12px;
     align-items: stretch;
+    min-height: 0;
   }
 
   .canvas-panel {
     position: relative;
-    min-height: 600px;
+    min-height: 0;
     overflow: hidden;
     background:
       linear-gradient(90deg, color-mix(in srgb, var(--border) 45%, transparent) 1px, transparent 1px),
@@ -497,7 +503,7 @@
   }
 
   .detail-panel {
-    min-height: 600px;
+    min-height: 0;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -636,7 +642,7 @@
 
     .canvas-panel,
     .detail-panel {
-      min-height: 420px;
+      min-height: 0;
     }
 
     .relation-controls {
